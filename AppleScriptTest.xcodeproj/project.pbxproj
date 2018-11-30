@@ -11,6 +11,8 @@
 		48964E7621A8EEF7001D2D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48964E7521A8EEF7001D2D1D /* Assets.xcassets */; };
 		48964E7921A8EEF7001D2D1D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48964E7721A8EEF7001D2D1D /* MainMenu.xib */; };
 		48964E7C21A8EEF7001D2D1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48964E7B21A8EEF7001D2D1D /* main.m */; };
+		48964E8521A8F243001D2D1D /* Safari.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 48964E8321A8F242001D2D1D /* Safari.scpt */; };
+		48964E8621A8F243001D2D1D /* TextEdit.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 48964E8421A8F242001D2D1D /* TextEdit.scpt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		48964E7A21A8EEF7001D2D1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48964E7B21A8EEF7001D2D1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		48964E7D21A8EEF7001D2D1D /* AppleScriptTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppleScriptTest.entitlements; sourceTree = "<group>"; };
+		48964E8321A8F242001D2D1D /* Safari.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = Safari.scpt; sourceTree = "<group>"; };
+		48964E8421A8F242001D2D1D /* TextEdit.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = TextEdit.scpt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				48964E7321A8EEF3001D2D1D /* AppDelegate.m */,
 				48964E7521A8EEF7001D2D1D /* Assets.xcassets */,
 				48964E7721A8EEF7001D2D1D /* MainMenu.xib */,
+				48964E8321A8F242001D2D1D /* Safari.scpt */,
+				48964E8421A8F242001D2D1D /* TextEdit.scpt */,
 				48964E7A21A8EEF7001D2D1D /* Info.plist */,
 				48964E7B21A8EEF7001D2D1D /* main.m */,
 				48964E7D21A8EEF7001D2D1D /* AppleScriptTest.entitlements */,
@@ -122,7 +128,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48964E8621A8F243001D2D1D /* TextEdit.scpt in Resources */,
 				48964E7621A8EEF7001D2D1D /* Assets.xcassets in Resources */,
+				48964E8521A8F243001D2D1D /* Safari.scpt in Resources */,
 				48964E7921A8EEF7001D2D1D /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
