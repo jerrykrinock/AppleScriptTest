@@ -22,22 +22,6 @@
                </EnvironmentBuildable>
             </ActionContent>
          </ExecutionAction>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Run Script"
-               scriptText = "PRODUCT_PATH=/Applications/$PRODUCT_NAME.app&#10;/usr/bin/codesign --verify &quot;$PRODUCT_PATH&quot;&#10;RESULT=$?&#10;if (( $RESULT &gt; 0 )) &#10;then&#10;END=FAILED&#10;else&#10;END=PASSED&#10;fi&#10;ANSWER=&quot;codesign --verify result for\n$PRODUCT_PATH:\n$END returned $RESULT&quot;&#10;osascript -e &quot;display dialog \&quot;$ANSWER\&quot;&quot;&#10;">
-               <EnvironmentBuildable>
-                  <BuildableReference
-                     BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "48964E6E21A8EEF3001D2D1D"
-                     BuildableName = "AppleScriptTest.app"
-                     BlueprintName = "AppleScriptTest"
-                     ReferencedContainer = "container:AppleScriptTest.xcodeproj">
-                  </BuildableReference>
-               </EnvironmentBuildable>
-            </ActionContent>
-         </ExecutionAction>
       </PostActions>
       <BuildActionEntries>
          <BuildActionEntry
@@ -87,6 +71,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
+         BundleIdentifier = "com.sheepsystems.AppleScriptTest"
          FilePath = "/Applications/AppleScriptTest.app">
       </PathRunnable>
       <MacroExpansion>

@@ -11,11 +11,10 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="textField" destination="3Nf-Zg-ad0" id="dAM-hq-32d"/>
-                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -683,10 +682,10 @@
         <window title="AppleScriptTest" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="32" y="742" width="566" height="111"/>
+            <rect key="contentRect" x="32" y="742" width="650" height="111"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="566" height="111"/>
+                <rect key="frame" x="0.0" y="0.0" width="650" height="111"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A0M-UX-nk0">
@@ -729,13 +728,16 @@
                 <constraints>
                     <constraint firstItem="A0M-UX-nk0" firstAttribute="firstBaseline" secondItem="w32-bQ-8tQ" secondAttribute="firstBaseline" id="0Nn-2c-iSH"/>
                     <constraint firstItem="A0M-UX-nk0" firstAttribute="top" secondItem="P8n-50-2NS" secondAttribute="bottom" constant="8" id="B1F-rJ-8ca"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w32-bQ-8tQ" secondAttribute="trailing" constant="20" symbolic="YES" id="Bkr-Qg-u0M"/>
                     <constraint firstItem="A0M-UX-nk0" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="40" id="J9c-Wl-6dM"/>
                     <constraint firstItem="3Nf-Zg-ad0" firstAttribute="top" secondItem="A0M-UX-nk0" secondAttribute="bottom" constant="8" id="NKg-F2-1qh"/>
                     <constraint firstAttribute="bottom" secondItem="3Nf-Zg-ad0" secondAttribute="bottom" constant="20" id="cfb-yr-BQq"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Nf-Zg-ad0" secondAttribute="trailing" constant="20" symbolic="YES" id="cmv-nR-8GW"/>
                     <constraint firstItem="P8n-50-2NS" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="g0l-T6-IJu"/>
                     <constraint firstItem="P8n-50-2NS" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="lDt-Tf-xmK"/>
                     <constraint firstItem="3Nf-Zg-ad0" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="22" id="lNZ-Xl-1wX"/>
                     <constraint firstItem="w32-bQ-8tQ" firstAttribute="leading" secondItem="A0M-UX-nk0" secondAttribute="trailing" constant="11" id="lWQ-6y-ugI"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="P8n-50-2NS" secondAttribute="trailing" constant="20" symbolic="YES" id="q1d-mc-xwu"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="178" y="-244.5"/>
