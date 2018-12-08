@@ -28,5 +28,7 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSAppleEventsUsageDescription </key>
+	<string>See no evil.  Hear no evil.  Speak no evil.</string>
 </dict>
 </plist>

@@ -682,14 +682,14 @@
         <window title="AppleScriptTest" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="32" y="742" width="650" height="111"/>
+            <rect key="contentRect" x="32" y="742" width="650" height="197"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="650" height="111"/>
+                <rect key="frame" x="0.0" y="0.0" width="650" height="197"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A0M-UX-nk0">
-                        <rect key="frame" x="34" y="38" width="75" height="32"/>
+                        <rect key="frame" x="34" y="59" width="75" height="32"/>
                         <buttonCell key="cell" type="push" title="Safari" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GHK-m4-dwW">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -699,23 +699,23 @@
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="P8n-50-2NS">
-                        <rect key="frame" x="18" y="74" width="235" height="17"/>
-                        <textFieldCell key="cell" selectable="YES" title="Run script involving &quot;tell application…&quot;" id="XkY-vs-9xR">
+                        <rect key="frame" x="18" y="95" width="194" height="17"/>
+                        <textFieldCell key="cell" selectable="YES" title="Run script to &quot;tell application…&quot;" id="XkY-vs-9xR">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3Nf-Zg-ad0">
-                        <rect key="frame" x="20" y="20" width="82" height="17"/>
-                        <textFieldCell key="cell" selectable="YES" title="No result yet" id="2hj-Uo-d7P">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Eqj-K9-PM6">
+                        <rect key="frame" x="239" y="171" width="98" height="17"/>
+                        <textFieldCell key="cell" selectable="YES" title="Run script from" id="Cb6-2v-3FF">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w32-bQ-8tQ">
-                        <rect key="frame" x="108" y="38" width="89" height="32"/>
+                        <rect key="frame" x="108" y="59" width="89" height="32"/>
                         <buttonCell key="cell" type="push" title="TextEdit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pNM-nD-aDT">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -724,23 +724,133 @@
                             <action selector="testTextEdit:" target="Voe-Tx-rLC" id="mWN-OY-0Av"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mUd-6v-aGv">
+                        <rect key="frame" x="240" y="144" width="205" height="18"/>
+                        <buttonCell key="cell" type="radio" title="This .app/Contents/Resources" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="llm-JW-Q0q">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="changeToAppResources:" target="Voe-Tx-rLC" id="hNt-BX-FSz"/>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="scriptSource" id="p4w-we-dg6">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="agQ-Mb-sU0">
+                        <rect key="frame" x="240" y="122" width="194" height="18"/>
+                        <buttonCell key="cell" type="radio" title="~/Library/Application Scripts" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="SMc-Ev-JZ6">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="changeToUsersLibrary:" target="Voe-Tx-rLC" id="vmT-PP-o5h"/>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="scriptSource" id="zcu-VT-yNs"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jXS-Cy-E0Y">
+                        <rect key="frame" x="240" y="69" width="111" height="18"/>
+                        <buttonCell key="cell" type="radio" title="NSAppleScript" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="6ic-6i-eRO">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="changeToNSAppleScript:" target="Voe-Tx-rLC" id="kU1-CB-Go5"/>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="executor" id="PrF-09-omq">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HAr-2H-91W">
+                        <rect key="frame" x="240" y="47" width="166" height="18"/>
+                        <buttonCell key="cell" type="radio" title="NSUserAppleScriptTask" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Lf6-6j-bmc">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="changeToNSUserAppleScriptTask:" target="Voe-Tx-rLC" id="Iu6-Yj-Y1f"/>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="executor" id="EtG-jN-ERW"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YDk-5X-MMF">
+                        <rect key="frame" x="521" y="107" width="76" height="32"/>
+                        <buttonCell key="cell" type="push" title="Install" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dNp-SV-Sou">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="install:" target="Voe-Tx-rLC" id="URN-Er-EQ7"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="DSt-c0-ecE">
+                        <rect key="frame" x="471" y="136" width="176" height="34"/>
+                        <textFieldCell key="cell" selectable="YES" alignment="center" id="zi9-RP-3gY">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">Install scripts into
+~/LibraryApplication Scripts</string>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="YQv-K7-gWv">
+                        <rect key="frame" x="239" y="94" width="120" height="17"/>
+                        <textFieldCell key="cell" selectable="YES" title="Execute script with" id="dou-On-bYq">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3Nf-Zg-ad0">
+                        <rect key="frame" x="18" y="13" width="82" height="17"/>
+                        <textFieldCell key="cell" selectable="YES" title="No result yet" id="2hj-Uo-d7P">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="A0M-UX-nk0" firstAttribute="firstBaseline" secondItem="w32-bQ-8tQ" secondAttribute="firstBaseline" id="0Nn-2c-iSH"/>
+                    <constraint firstItem="DSt-c0-ecE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mUd-6v-aGv" secondAttribute="trailing" constant="6" symbolic="YES" id="4Kf-IC-lVO"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HAr-2H-91W" secondAttribute="trailing" constant="20" symbolic="YES" id="7T4-92-4ej"/>
                     <constraint firstItem="A0M-UX-nk0" firstAttribute="top" secondItem="P8n-50-2NS" secondAttribute="bottom" constant="8" id="B1F-rJ-8ca"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w32-bQ-8tQ" secondAttribute="trailing" constant="20" symbolic="YES" id="Bkr-Qg-u0M"/>
+                    <constraint firstItem="HAr-2H-91W" firstAttribute="top" secondItem="jXS-Cy-E0Y" secondAttribute="bottom" constant="6" id="DtP-5D-3Ef"/>
+                    <constraint firstItem="YDk-5X-MMF" firstAttribute="centerX" secondItem="DSt-c0-ecE" secondAttribute="centerX" id="ElK-iJ-ypG"/>
+                    <constraint firstItem="YQv-K7-gWv" firstAttribute="leading" secondItem="Eqj-K9-PM6" secondAttribute="leading" id="Fxo-rb-eCv"/>
                     <constraint firstItem="A0M-UX-nk0" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="40" id="J9c-Wl-6dM"/>
-                    <constraint firstItem="3Nf-Zg-ad0" firstAttribute="top" secondItem="A0M-UX-nk0" secondAttribute="bottom" constant="8" id="NKg-F2-1qh"/>
-                    <constraint firstAttribute="bottom" secondItem="3Nf-Zg-ad0" secondAttribute="bottom" constant="20" id="cfb-yr-BQq"/>
+                    <constraint firstItem="jXS-Cy-E0Y" firstAttribute="top" secondItem="YQv-K7-gWv" secondAttribute="bottom" constant="8" id="LXw-Bc-yqT"/>
+                    <constraint firstItem="3Nf-Zg-ad0" firstAttribute="top" secondItem="A0M-UX-nk0" secondAttribute="bottom" constant="36" id="NKg-F2-1qh"/>
+                    <constraint firstItem="DSt-c0-ecE" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="27" id="RI0-SA-NED"/>
+                    <constraint firstItem="YQv-K7-gWv" firstAttribute="top" secondItem="agQ-Mb-sU0" secondAttribute="bottom" constant="12" id="Rh2-NG-c3K"/>
+                    <constraint firstItem="agQ-Mb-sU0" firstAttribute="top" secondItem="mUd-6v-aGv" secondAttribute="bottom" constant="6" id="Ua3-nt-LS5"/>
+                    <constraint firstItem="mUd-6v-aGv" firstAttribute="leading" secondItem="Eqj-K9-PM6" secondAttribute="leading" id="VEA-aw-tA4"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YQv-K7-gWv" secondAttribute="trailing" constant="20" symbolic="YES" id="VIe-Gs-P0A"/>
+                    <constraint firstItem="HAr-2H-91W" firstAttribute="leading" secondItem="Eqj-K9-PM6" secondAttribute="leading" id="ZfQ-zf-3Ar"/>
+                    <constraint firstAttribute="bottom" secondItem="3Nf-Zg-ad0" secondAttribute="bottom" constant="13" id="cfb-yr-BQq"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Nf-Zg-ad0" secondAttribute="trailing" constant="20" symbolic="YES" id="cmv-nR-8GW"/>
-                    <constraint firstItem="P8n-50-2NS" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="g0l-T6-IJu"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jXS-Cy-E0Y" secondAttribute="trailing" constant="20" symbolic="YES" id="e9T-zi-BJT"/>
+                    <constraint firstItem="mUd-6v-aGv" firstAttribute="top" secondItem="Eqj-K9-PM6" secondAttribute="bottom" constant="10" id="frT-ax-3iK"/>
+                    <constraint firstItem="P8n-50-2NS" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="85" id="g0l-T6-IJu"/>
+                    <constraint firstItem="YDk-5X-MMF" firstAttribute="top" secondItem="DSt-c0-ecE" secondAttribute="bottom" constant="1" id="iR4-30-mSP"/>
+                    <constraint firstItem="jXS-Cy-E0Y" firstAttribute="leading" secondItem="Eqj-K9-PM6" secondAttribute="leading" id="jdF-0h-aQ3"/>
+                    <constraint firstItem="Eqj-K9-PM6" firstAttribute="leading" secondItem="P8n-50-2NS" secondAttribute="trailing" constant="31" id="kpL-uu-OcZ"/>
                     <constraint firstItem="P8n-50-2NS" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="lDt-Tf-xmK"/>
-                    <constraint firstItem="3Nf-Zg-ad0" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="22" id="lNZ-Xl-1wX"/>
+                    <constraint firstItem="3Nf-Zg-ad0" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="lNZ-Xl-1wX"/>
                     <constraint firstItem="w32-bQ-8tQ" firstAttribute="leading" secondItem="A0M-UX-nk0" secondAttribute="trailing" constant="11" id="lWQ-6y-ugI"/>
+                    <constraint firstItem="agQ-Mb-sU0" firstAttribute="leading" secondItem="Eqj-K9-PM6" secondAttribute="leading" id="oCy-TQ-oEz"/>
+                    <constraint firstItem="YDk-5X-MMF" firstAttribute="leading" secondItem="agQ-Mb-sU0" secondAttribute="trailing" constant="95" id="oYT-gB-4Vs"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="P8n-50-2NS" secondAttribute="trailing" constant="20" symbolic="YES" id="q1d-mc-xwu"/>
+                    <constraint firstItem="P8n-50-2NS" firstAttribute="firstBaseline" secondItem="Eqj-K9-PM6" secondAttribute="firstBaseline" constant="76" id="qsd-VB-COm"/>
+                    <constraint firstItem="DSt-c0-ecE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Eqj-K9-PM6" secondAttribute="trailing" constant="8" symbolic="YES" id="vfH-aE-MHn"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="178" y="-244.5"/>
+            <point key="canvasLocation" x="178" y="-201.5"/>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="PEm-C9-377"/>
     </objects>
 </document>
